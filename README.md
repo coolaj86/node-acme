@@ -40,8 +40,8 @@ acme.getMeACertificate(serverURL, domain, function(result) {
 
 // The hard way
 var client = acme.createClient(serverURL);
-var authorizedKeyPair = client.generateKey(keySize);
-var subjectKeyPair = client.generateKey(keySize);
+var authorizedKeyPair = client.generateKeyPair(keySize);
+var subjectKeyPair = client.generateKeyPair(keySize);
 client.authorizeKeyPair(authorizedKeyPair, domain, function(result) {
   // Result has a recovery key
   
